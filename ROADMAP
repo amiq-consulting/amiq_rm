@@ -1,0 +1,15 @@
+This file contains a list of ideas which will be implemented in the future in amiq_rm.
+
+@2015-10-15:
+* add logic to make the register accesses thread safe
+* implement checks for overlapping addresses and circular instantiations
+* at build(), check that all fields have legal values, ortherwise trigger an assertion
+* implement messages with configurable verbosity
+* implement a get_absolute_addresses() method for address map and registers - it requires to return a list of addresses and the paths to the register
+* implement register accesses of different size - byte, half word, word
+* for all the functions which return a list of X implement an equivalent function which returns just an X
+* implement a field attribute to control if the field is reset-able or not
+* add a configuration field to address_map based on which a flat hash map will be computed for all registers that are instantiated underneath (including child submaps)
+* implement TLM 2.0 sockets - LT model
+* generate a benchmark environment (multiple registers... etc)
+* use lazy evaluation for updating field/register value contents
