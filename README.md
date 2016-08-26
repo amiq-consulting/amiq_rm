@@ -3,6 +3,8 @@ amiq_rm
 
 Register model library in C++
 
+[Amiq Blog Related Article](http://www.amiq.com/consulting/2015/12/09/c-register-modeling-framework/)
+
 This is a C++ library which can be used to model behavior of registers found in a chip. The user has the possibility to define fields in a registers
 with different attributes (RO, RW, W1C, etc) and sizes. The registers are mapped then in "address_maps". Various topologies can be created by the user
 (flat topologies - in which all registers are under one address map, hierarchical topologies - in which address_maps contain other address_maps which 
