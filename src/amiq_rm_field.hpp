@@ -59,7 +59,7 @@ public:
 	 * @n "W1C"   - W: 1/0 clears/no effect on matching bit, R: no effect
 	 * @n There is a mechanism which relies on functions like is_writable(), is_readable(), etc. through which
 	 * the attribute's behavior is extracted and used by the register at access. */
-	std::string atrib;
+	std::string attrib;
 
 	/** Create new field.
 	 * @param my_name is set as the name of the field
@@ -71,7 +71,7 @@ public:
 		name = my_name;
 		reset_value = my_reset_value;
 		size = my_size;
-		atrib = my_attrib;
+		attrib = my_attrib;
 
 		lsb_position = 0;
 	}

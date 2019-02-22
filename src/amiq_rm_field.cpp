@@ -29,12 +29,12 @@ using namespace std;
 namespace amiq_rm {
 
 bool amiq_rm_field::is_writable() {
-	return ((atrib == "RW") || (atrib == "WO") || (atrib == "WRC") || (atrib == "WRS"));
+	return ((attrib == "RW") || (attrib == "WO") || (attrib == "WRC") || (attrib == "WRS"));
 }
 
 bool amiq_rm_field::is_readable() {
-	return ((atrib == "RO") || (atrib == "RW") || (atrib == "RC") || (atrib == "RS") || (atrib == "WRC") || (atrib == "WRS") ||
-			(atrib == "WC") || (atrib == "WS") || (atrib == "WSRC") || (atrib == "WCRS") || (atrib == "W1C"));
+	return ((attrib == "RO") || (attrib == "RW") || (attrib == "RC") || (attrib == "RS") || (attrib == "WRC") || (attrib == "WRS") ||
+			(attrib == "WC") || (attrib == "WS") || (attrib == "WSRC") || (attrib == "WCRS") || (attrib == "W1C"));
 }
 
 bool amiq_rm_field::is_error_on_write() {
@@ -42,23 +42,23 @@ bool amiq_rm_field::is_error_on_write() {
 }
 
 bool amiq_rm_field::is_error_on_read() {
-	return (atrib == "WO");
+	return (attrib == "WO");
 }
 
 bool amiq_rm_field::is_clear_on_read() {
-	return ((atrib == "RC") || (atrib == "WRC") || (atrib == "WSRC"));
+	return ((attrib == "RC") || (attrib == "WRC") || (attrib == "WSRC"));
 }
 
 bool amiq_rm_field::is_clear_on_write() {
-	return ((atrib == "WC") || (atrib == "WCRS"));
+	return ((attrib == "WC") || (attrib == "WCRS"));
 }
 
 bool amiq_rm_field::is_set_on_read() {
-	return ((atrib == "RS") || (atrib == "WRS") || (atrib == "WCRS"));
+	return ((attrib == "RS") || (attrib == "WRS") || (attrib == "WCRS"));
 }
 
 bool amiq_rm_field::is_set_on_write() {
-	return ((atrib == "WS") || (atrib == "WSRC"));
+	return ((attrib == "WS") || (attrib == "WSRC"));
 }
 
 string amiq_rm_field::to_string() {

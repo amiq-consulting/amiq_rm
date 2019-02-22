@@ -215,7 +215,7 @@ void amiq_rm_reg::post_access(amiq_rm_direction_t direction, amiq_rm_reg_data_t 
 	if (fields.size() > 0) {
 		for (int unsigned i = 0; i <= fields.size() - 1; i++) {
 			//implement W1C mechanism
-			if ((direction == WRITE) && (fields[i]->atrib == "W1C")) {
+			if ((direction == WRITE) && (fields[i]->attrib == "W1C")) {
 				set_field_value(fields[i]->name, get_field_value(fields[i]->name) ^ (!get_access_data_for_field(fields[i]->name, access_data)));
 			}
 
